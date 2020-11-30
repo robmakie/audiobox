@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import { ConfigHelper } from "@oceanprotocol/lib";
+import { OceanProvider, useOcean } from "@oceanprotocol/react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import NetworkMonitor from './components/NetworkMonitor'
+import Header from './components/Header'
+import Collection from "./components/Collection"
+import MusicDetails from "./components/MusicDetails"
 import './App.css';
+
+const configRinkeby = new ConfigHelper().getConfig(process.env.REACT_APP_NETWORK);
+
+
+const providerOptions = {};
+
+export const web3ModalOpts = {
+  cacheProvider: true,
+  providerOptions
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <OceanProvider initialConfig={configRinkeby} web3ModalOpts={web3ModalOpts}>
+      <NetworkMonitor />
+      <Router>
+        <div className="App">
+          <Header />
+          <div className="divider"></div>
+          <Switch>
+            <Route path="/asset/:did" component={MusicDetails} />
+            <Route path="/" component={Collection} />
+          </Switch>
+        </div>
+      </Router>
+    </OceanProvider>
   );
 }
 

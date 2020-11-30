@@ -1,0 +1,25 @@
+
+.headerContainer {
+    padding: 2%;
+    background: #4a5156;
+   
+    /* These do the magic */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+  }
+   
+
+.navbarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
