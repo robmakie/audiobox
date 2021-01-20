@@ -1,7 +1,8 @@
 {
-  "name": "audiobox",
+  "name": "podbox",
   "version": "0.1.0",
   "private": true,
+  "author": "robmakie",
   "dependencies": {
     "@oceanprotocol/lib": "^0.9.20",
     "@oceanprotocol/react": "^0.3.23",
@@ -9,16 +10,19 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
+    "react-confetti": "^6.0.0",
     "react-dom": "^17.0.1",
     "react-loader-spinner": "^3.1.14",
+    "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "semantic-ui-react": "^2.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "web3": "^1.3.1"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "craco --max_old_space_size=4096 start",
+    "build": "craco --max_old_space_size=4096 build",
     "test": "craco test",
     "eject": "craco eject"
   },

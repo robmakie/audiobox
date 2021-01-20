@@ -1,6 +1,6 @@
 .headerContainer {
   padding: 2%;
-  background: #4a5156;
+  background: #000;
 
   /* These do the magic */
   position: fixed;
@@ -16,7 +16,7 @@
 }
 
 .brand {
-  color: #fff;
+  color: yellow;
 }
 .topContainer {
   flex: 1;

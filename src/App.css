@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /*background-color: #4a5156;*/
+  background-color: #fafafa;
   min-height: 2000px;
 }
 
@@ -8,5 +8,5 @@
   margin-top: 5%;
   height: 5%;
   min-height: 2% !important;
-  background-color: '#000';
+  background-color: "#000";
 }

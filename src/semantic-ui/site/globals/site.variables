@@ -3,4 +3,4 @@
 *******************************/
 
 @primaryColor: #002f4e;
-@pageBackground: #000;
+@pageBackground: #000000;

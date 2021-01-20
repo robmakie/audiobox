@@ -1,4 +1,8 @@
 .cards {
-    background-color: #000;
-    color: #ffffff;
+  background-color: #000;
+  color: #ffffff;
+}
+
+.card > .cardContent {
+  background-color: azure;
 }
